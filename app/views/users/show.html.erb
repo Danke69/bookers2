@@ -1,4 +1,6 @@
-  <% if @user == current_user.id %>
-    <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
-  <% end %>
-  <%= image_tag @user.get_profile_image(100,100) %>
+<%= render 'list', user: @user %>
+
+<% if @user == current_user.id %>
+  <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
+<% end %>
+
