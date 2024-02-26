@@ -11,6 +11,11 @@ class ApplicationController < ActionController::Base
     '/'
   end
 
+  def destroy
+    redirect_to about_path
+
+  end
+
   protected
 
   def configure_permitted_parameters
