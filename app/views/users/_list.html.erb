@@ -31,7 +31,9 @@
         <label for="book_opinion">Option</label>
       </div>
         <%= f.text_area :body %>
-        <%= f.submit 'Create Book' %>
+      　<%= form_for @book, url: books_path, method: :get do |f| %>
+  　　　　　　<%= f.submit 'Create Book' %>
+　　　　<% end %>
       <% end %>
     </div>
 
